@@ -4,6 +4,7 @@ import Operator from "./Operator";
 
 function NumPad() {
     return (
+        // Digit limiter: 14.
         <div className="numpad">
             <Operator sign="AC" id="clear" />
             <Operator sign="/" id="divide" />
