@@ -1,8 +1,8 @@
 const { combineReducers } = require("redux");
-const { default: currentNumberReducer } = require("./currentNumber");
+const { default: currentContentReducer } = require("./currentContent");
 
 const rootReducer = combineReducers({
-    currentNumber: currentNumberReducer
+    currentContent: currentContentReducer
 });
 
 export default rootReducer;

@@ -1,24 +1,24 @@
 const initialState = {
-    number: "",
+    content: "",
     isInLimit: false
 };
 
-const currentNumberReducer = (state = initialState, action) => {
+const currentContentReducer = (state = initialState, action) => {
     switch (action.type) {
         case "APPEND_NUMBER":
-            if (state.number.length === 10) {
+            if (state.content.length === 10) {
                 return {
                     ...state,
                     isInLimit: true
                 }
             }
             return {
-                number: state.number + action.payload,
+                content: state.content + action.payload,
                 isInLimit: false
             };
         case "CLEAR":
             return {
-                number: "",
+                content: "",
                 isInLimit: false
             }
         default:
@@ -26,4 +26,4 @@ const currentNumberReducer = (state = initialState, action) => {
     }
 }
 
-export default currentNumberReducer;
+export default currentContentReducer;
