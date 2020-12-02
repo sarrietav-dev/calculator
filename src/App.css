@@ -16,3 +16,15 @@
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 50px;
 }
+
+#AC, #cero {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#equals {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 6;
+}

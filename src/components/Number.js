@@ -1,7 +1,11 @@
 import React from "react";
 
-function Number({ num }) {
-    return <button className="number">{num}</button>;
+function Number({ num, id }) {
+    return (
+        <button className="number" id={id}>
+            {num}
+        </button>
+    );
 }
 
 export default Number;
