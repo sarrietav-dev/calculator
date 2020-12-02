@@ -5,7 +5,7 @@ import Operator from "./Operator";
 function NumPad() {
     return (
         <div className="numpad">
-            <Operator sign="AC" id="AC"/>
+            <Operator sign="AC" id="AC" />
             <Operator sign="/" />
             <Operator sign="X" />
             <Number num={7} />
@@ -19,9 +19,9 @@ function NumPad() {
             <Number num={1} />
             <Number num={2} />
             <Number num={3} />
-            <Operator sign="=" id="equals"/>
-            <Number num={0} id="cero"/>
-            <Operator sign="." />
+            <Operator sign="=" id="equals" />
+            <Number num={0} id="cero" />
+            <Operator sign="." id="dot" />
         </div>
     );
 }

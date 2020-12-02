@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+
 .App {
     text-align: center;
     height: 100vh;
@@ -15,11 +17,17 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 50px;
+    border: 2px solid black;
 }
 
-#AC, #cero {
+#AC,
+#cero {
     grid-column-start: 1;
     grid-column-end: 3;
+}
+
+#AC {
+    background-color: #ac3939;
 }
 
 #equals {
@@ -27,4 +35,26 @@
     grid-column-end: 5;
     grid-row-start: 4;
     grid-row-end: 6;
+    background-color: #004466;
+}
+
+.numpad button {
+    border: 1px solid black;
+    color: white;
+    font-family: "Share Tech Mono", monospace;
+}
+
+.operator {
+    background-color: gray;
+}
+
+.numpad button:hover {
+    color: black;
+    border: 2px solid rgb(180, 179, 179);
+    border-radius: 1px;
+}
+
+.number,
+#dot {
+    background-color: rgb(82, 82, 82);
 }
