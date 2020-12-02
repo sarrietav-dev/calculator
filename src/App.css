@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
 
 .App {
     text-align: center;
@@ -62,4 +63,22 @@
 .display-wrapper {
     background-color: black;
     height: 75px;
+    display: flex;
+    flex-direction: column;
+    font-family: "Major Mono Display", monospace;
+}
+
+.formula {
+    height: 37.5px;
+}
+
+#display {
+    color: white;
+    height: 37.5px;
+    font-size: 2rem;
+    text-align: right;
+}
+
+#display .warning {
+    font-size: 1.25rem;
 }
