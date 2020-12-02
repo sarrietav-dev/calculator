@@ -13,9 +13,14 @@ const currentNumberReducer = (state = initialState, action) => {
                 }
             }
             return {
-                ...state,
-                number: state.number + action.payload
+                number: state.number + action.payload,
+                isInLimit: false
             };
+        case "CLEAR":
+            return {
+                number: "",
+                isInLimit: false
+            }
         default:
             return state;
     }
