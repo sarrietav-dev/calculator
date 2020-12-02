@@ -12,6 +12,9 @@
 .calculator {
     width: 250px;
     height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .numpad {
@@ -62,19 +65,22 @@
 
 .display-wrapper {
     background-color: black;
-    height: 75px;
+    height: auto;
     display: flex;
     flex-direction: column;
     font-family: "Major Mono Display", monospace;
 }
 
 .formula {
-    height: 37.5px;
+    height: auto;
+    color: rgb(255, 187, 0);
+    text-align: right;
+    word-wrap: break-word;
+    overflow: auto;
 }
 
 #display {
     color: white;
-    height: 37.5px;
     font-size: 2rem;
     text-align: right;
 }

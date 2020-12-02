@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 
 function Screen() {
     const currentContent = useSelector((state) => state.currentContent);
+    const formula = useSelector((state) => state.formula);
 
     let styleWarning = {
         display: "none",
@@ -23,14 +24,8 @@ function Screen() {
 
     return (
         <div className="display-wrapper">
-            <div className="formula"></div>
-            <div id="display">
-                {currentContent.isInLimit && showWarning()}
-                <span style={styleWarning} className="warning">
-                    Digit limit met
-                </span>
-                <span style={styleNumber}>{currentContent.content}</span>
-            </div>
+            <div className="formula">{formula.current}</div>
+            <div id="display">{currentContent.content}</div>
         </div>
     );
 }
