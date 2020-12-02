@@ -1,7 +1,7 @@
 import React from "react";
 
 function Number({ num }) {
-    return <div className="number">{num}</div>;
+    return <button className="number">{num}</button>;
 }
 
 export default Number;
