@@ -7,10 +7,7 @@ const currentContentReducer = (state = initialState, action) => {
     switch (action.type) {
         case "APPEND_NUMBER":
             if (state.content.length === 10) {
-                return {
-                    ...state,
-                    isInLimit: true
-                }
+                return state
             }
             return {
                 content: state.content + action.payload,
