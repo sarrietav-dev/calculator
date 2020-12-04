@@ -6,3 +6,7 @@ export const appendNumber = (num) => ({
 export const clear = () => ({
     type: "CLEAR"
 })
+
+export const add = () => ({
+    type: "ADD",
+})
