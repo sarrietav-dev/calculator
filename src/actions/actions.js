@@ -10,3 +10,7 @@ export const clear = () => ({
 export const add = () => ({
     type: "ADD",
 })
+
+export const equals = () => ({
+    type: "EQUALS"
+})
