@@ -11,11 +11,13 @@ const currentContentReducer = (state = initialState, action) => {
                 return state
             }
             return {
+                ...state,
                 content: state.content + action.payload,
                 isInLimit: false
             };
         case "CLEAR":
             return {
+                previous: 0,
                 content: "",
                 isInLimit: false
             }
@@ -23,6 +25,14 @@ const currentContentReducer = (state = initialState, action) => {
             return {
                 previous: state.previous + parseFloat(state.content),
                 content: "",
+                isInLimit: false
+            }
+        // TODO: Make this show the same value everytime its click.
+        case "EQUALS":
+            const result = state.previous + parseFloat(state.content);
+            return {
+                previous: result,
+                content: result,
                 isInLimit: false
             }
         default:
