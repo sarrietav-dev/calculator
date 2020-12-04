@@ -1,6 +1,7 @@
 const initialState = {
     content: "",
-    isInLimit: false
+    isInLimit: false,
+    previous: 0
 };
 
 const currentContentReducer = (state = initialState, action) => {
@@ -15,6 +16,12 @@ const currentContentReducer = (state = initialState, action) => {
             };
         case "CLEAR":
             return {
+                content: "",
+                isInLimit: false
+            }
+        case "ADD":
+            return {
+                previous: state.previous + parseFloat(state.content),
                 content: "",
                 isInLimit: false
             }
