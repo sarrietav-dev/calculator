@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { clear } from "../actions/actions";
+import { add, clear } from "../actions/actions";
 
 function Operator({ sign, id }) {
     const dispatch = useDispatch();
@@ -8,9 +8,10 @@ function Operator({ sign, id }) {
 
     switch (id) {
         case "clear":
-            onClickHandler = () => {
-                dispatch(clear());
-            };
+            onClickHandler = () => dispatch(clear());
+            break;
+        case "add":
+            onClickHandler = () => dispatch(add());
             break;
         default:
             break;

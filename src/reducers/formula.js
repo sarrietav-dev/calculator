@@ -15,6 +15,10 @@ const formulaReducer = (state = initialState, action) => {
             return {
                 current: "",
             }
+        case "ADD":
+            return {
+                current: state.current + "+"
+            }
         default:
             return state
     }
